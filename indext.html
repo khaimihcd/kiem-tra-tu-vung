@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+
+
+<body>
+
+    <div class="container">
+
+        <!-- MÀN HÌNH CHỌN CHỦ ĐỀ -->
+        <section id="topicScreen" class="screen">
+
+            <h1>English Vocabulary</h1>
+            <p class="subtitle">Chọn chủ đề bạn muốn học</p>
+
+            <div id="topicList" class="topic-list">
+                <!-- JavaScript sẽ tạo danh sách chủ đề ở đây -->
+            </div>
+
+            <button id="startButton">Bắt đầu học</button>
+
+        </section>
+
+
+        <!-- MÀN HÌNH HỌC TỪ VỰNG -->
+        <section id="learningScreen" class="screen hidden">
+
+            <div class="top-bar">
+                <button id="backButton">← Chủ đề</button>
+                <span id="progress">1 / 10</span>
+            </div>
+
+            <div class="card">
+
+                <h1 id="meaning">Quả táo</h1>
+
+                <p id="phonetic">/ˈæp.əl/</p>
+
+                <p id="type">Danh từ (Noun)</p>
+
+                <input type="text" id="answer" placeholder="Nhập từ tiếng Anh..." autocomplete="off">
+
+                <p id="message"></p>
+
+                <!-- Hiển thị chữ cái gợi ý -->
+                <p id="hint"></p>
+
+                <div class="result">
+                    <p>Đúng: <span id="correct">0</span></p>
+                    <p>Sai: <span id="wrong">0</span></p>
+                </div>
+
+            </div>
+
+            <button id="restart">Học lại từ đầu</button>
+
+        </section>
+
+
+        <!-- MÀN HÌNH HOÀN THÀNH -->
+
+        <section id="finishScreen" class="screen hidden">
+
+            <div class="card">
+
+                <h1>Hoàn thành!</h1>
+
+                <p>Bạn đã hoàn thành bộ từ vựng.</p>
+
+                <div class="result">
+                    <p>Đúng: <span id="finalCorrect">0</span></p>
+                    <p>Sai: <span id="finalWrong">0</span></p>
+                </div>
+
+                <h2 class="wrong-title">Danh sách từ trả lời sai</h2>
+
+                <div id="wrongList" class="wrong-list">
+                    <!-- JavaScript đưa danh sách từ sai vào đây -->
+                </div>
+
+                <button id="retryWrongButton">
+                    Học lại từ sai
+                </button>
+
+                <button id="retryButton">
+                    Học lại toàn bộ
+                </button>
+
+                <button id="topicButton">
+                    Chọn chủ đề khác
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- Nạp dữ liệu từ vựng trước -->
+    <script src="./vocabulary.js"></script>
+
+    <!-- Nạp chương trình xử lý chính sau -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>
